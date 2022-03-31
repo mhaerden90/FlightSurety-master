@@ -11,12 +11,25 @@ To install, download or clone the repo, then:
 `npm install`
 `truffle compile`
 
+versions used:
+
+Truffle v5.0.2 (core: 5.0.2)
+Solidity - ^0.4.24 (solc-js)
+Node v10.7.0
+
 ## Develop Client
 
 To run truffle tests:
+NOTE for test development envirment is required:
 
-`truffle test ./test/flightSurety.js`
-`truffle test ./test/oracles.js`
+First run:
+
+`truffle develop`
+
+then run:
+
+`test ./test/flightSurety.js`
+`test ./test/oracles.js`
 
 To use the dapp:
 
@@ -27,7 +40,10 @@ To view dapp:
 
 `http://localhost:8000`
 
+NOTE the dapp allows for requesting an insurance and fetching flight status only
+
 ## Develop Server
+NOTE in order to succesfully create 20+ Oracles, creata startup Ganache with at least 100 accounts. accounts 70 to 90 will be used for creating oracles.
 
 `npm run server`
 `truffle test ./test/oracles.js`
